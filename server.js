@@ -1,6 +1,6 @@
 const { prompt } = require("inquirer");
 const figlet = require("figlet");
-const db = require("./db");
+const db = require("./db/index");
 const chalk = require("chalk");
 require("console.table");
 

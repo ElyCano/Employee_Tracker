@@ -14,3 +14,5 @@ const validate = {
 };
 
 module.exports = validate;
+
+Validate.js;
