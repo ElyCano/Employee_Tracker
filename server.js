@@ -50,12 +50,24 @@ async function loadMainPrompts() {
           value: "VIEW_EMPLOYEES_BY_MANAGER",
         },
         {
-          name: "Add Employee",
-          value: "ADD_EMPLOYEE",
+          name: "View All Departments",
+          value: "VIEW_DEPARTMENTS",
         },
         {
-          name: "Remove Employee",
-          value: "REMOVE_EMPLOYEE",
+          name: "View All Roles",
+          value: "VIEW_ROLES",
+        },
+        {
+          name: "Add Department",
+          value: "ADD_DEPARTMENT",
+        },
+        {
+          name: "Add Role",
+          value: "ADD_ROLE",
+        },
+        {
+          name: "Add Employee",
+          value: "ADD_EMPLOYEE",
         },
         {
           name: "Update Employee Role",
@@ -66,29 +78,19 @@ async function loadMainPrompts() {
           value: "UPDATE_EMPLOYEE_MANAGER",
         },
         {
-          name: "View All Roles",
-          value: "VIEW_ROLES",
-        },
-        {
-          name: "Add Role",
-          value: "ADD_ROLE",
+          name: "Remove Department",
+          value: "REMOVE_DEPARTMENT",
         },
         {
           name: "Remove Role",
           value: "REMOVE_ROLE",
         },
+
         {
-          name: "View All Departments",
-          value: "VIEW_DEPARTMENTS",
+          name: "Remove Employee",
+          value: "REMOVE_EMPLOYEE",
         },
-        {
-          name: "Add Department",
-          value: "ADD_DEPARTMENT",
-        },
-        {
-          name: "Remove Department",
-          value: "REMOVE_DEPARTMENT",
-        },
+
         {
           name: "Quit",
           value: "QUIT",
@@ -132,7 +134,6 @@ async function loadMainPrompts() {
 
 // ----------------------------------------------------- VIEWS -----------------------------------------------------------------------
 
-// View All Employees
 async function viewAllEmployees() {
   const employees = await db.findAllEmployees();
 
@@ -468,7 +469,6 @@ async function addEmployee() {
   loadMainPrompts();
 }
 
-//Exit the application
 function quit() {
   console.log("Hasta La Vista Baby!");
   process.exit();

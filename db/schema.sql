@@ -6,12 +6,12 @@ USE employees;
 
 CREATE TABLE department (
     id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) UNIQUE NOT NULL
+    name VARCHAR(45) UNIQUE NOT NULL
 );
 
 CREATE TABLE role(
     id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(30) UNIQUE NOT NULL,
+    title VARCHAR(45) UNIQUE NOT NULL,
     salary DECIMAL UNSIGNED NOT NULL,
     department_id INTEGER UNSIGNED NOT NULL,
     INDEX dep_ind (department_id),
@@ -22,8 +22,8 @@ CREATE TABLE role(
 
 CREATE TABLE employee(
      id INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
+    first_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
    role_id INTEGER UNSIGNED NOT NULL,
    manager_id INTEGER UNSIGNED,
    INDEX role_ind (role_id),
@@ -32,3 +32,4 @@ CREATE TABLE employee(
        CONSTRAINT fk_manager  FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE CASCADE
 
 );
+
