@@ -12,13 +12,9 @@ This application called Note Taker that can be used to write and save notes. Thi
 
 Live demo [_Click Here_](https://watch.screencastify.com/v/AWpbZyVMtz2QGHkPasq5). <!-- If you have the project hosted somewhere, include the link here. -->
 
-## Index.html Screenshot
+## Screenshot
 
-![Index.html-pic](https://github.com/ElyCano/Notes/blob/main/public/assets/img/index.html.jpg)
-
-## Notes.html Screenshot
-
-![Notes.html-pic](https://github.com/ElyCano/Notes/blob/main/public/assets/img/notes.html.jpg)
+![screenshot-pic](https://github.com/ElyCano/Employee_Tracker/blob/main/assets/images/Screenshot.jpg?raw=true)
 
 ## Table of Contents
 
