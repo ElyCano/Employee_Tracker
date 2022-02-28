@@ -2,6 +2,7 @@ const { prompt } = require("inquirer");
 const figlet = require("figlet");
 const db = require("./db/index");
 const chalk = require("chalk");
+const inquirer = require("inquirer");
 require("console.table");
 
 init();
@@ -78,6 +79,10 @@ async function loadMainPrompts() {
           value: "UPDATE_EMPLOYEE_MANAGER",
         },
         {
+          name: "Utilized Budget",
+          value: "UTILIZED_BUDGET",
+        },
+        {
           name: "Remove Department",
           value: "REMOVE_DEPARTMENT",
         },
@@ -115,6 +120,8 @@ async function loadMainPrompts() {
       return updateEmployeeRole();
     case "UPDATE_EMPLOYEE_MANAGER":
       return updateEmployeeManager();
+    case "UTILIZED_BUDGET":
+      return UtilizedBudget();
     case "VIEW_DEPARTMENTS":
       return viewDepartments();
     case "ADD_DEPARTMENT":
@@ -127,6 +134,7 @@ async function loadMainPrompts() {
       return addRole();
     case "REMOVE_ROLE":
       return removeRole();
+
     default:
       return quit();
   }
@@ -135,10 +143,10 @@ async function loadMainPrompts() {
 // ----------------------------------------------------- VIEWS -----------------------------------------------------------------------
 
 async function viewAllEmployees() {
-  const employees = await db.findAllEmployees();
+  const inventory = await db.findAllEmployees();
 
   console.log("\n");
-  console.table(employees);
+  console.table(inventory);
 
   loadMainPrompts();
 }
@@ -246,7 +254,7 @@ async function updateEmployeeRole() {
     value: id,
   }));
 
-  const { roleId } = await prompt([
+  const { roleId } = await inquirer.prompt([
     {
       type: "list",
       name: "roleId",
@@ -465,6 +473,15 @@ async function addEmployee() {
   console.log(
     `Added ${employee.first_name} ${employee.last_name} to the database`
   );
+
+  loadMainPrompts();
+}
+
+async function UtilizedBudget() {
+  const departments = await db.UtilizedBudget();
+
+  console.log("\n");
+  console.table(departments);
 
   loadMainPrompts();
 }

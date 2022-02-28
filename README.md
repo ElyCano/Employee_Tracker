@@ -10,7 +10,7 @@ This application called Note Taker that can be used to write and save notes. Thi
 
 ## Demo
 
-Live demo [_Click Here_](https://watch.screencastify.com/v/O3sV2WaRIQWW0LbcHXpB). <!-- If you have the project hosted somewhere, include the link here. -->
+Live demo [_Click Here_](https://watch.screencastify.com/v/O3sV2WaRIQWW0LbcHXpB). <!-- If you have the project hosted somewhere, include Second demo [_Click Here_](https://watch.screencastify.com/v/3jIEPVV0syySBYmosKxT).
 
 ## Screenshot
 
